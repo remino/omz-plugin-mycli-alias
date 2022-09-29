@@ -3,9 +3,7 @@
 
 if [ "${1:0:1}" = "@" ]
 then
-	loginpath="${1:s/^@/}"
-	shift
-	command mysql --login-path="$loginpath" "$@"
+	command mysql --login-path="${1:1}" "${@:2}"
 else
 	command mysql "$@"
 fi
