@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+# vi:ft=zsh
+
+if [ "${1:0:1}" = "@" ]
+then
+	loginpath="${1:s/^@/}"
+	shift
+	command mysql --login-path="$loginpath" "$@"
+else
+	command mysql "$@"
+fi
