@@ -3,7 +3,7 @@
 
 if [ "${1:0:1}" = "@" ]
 then
-	command mysql --login-path="${1:1}" "${@:2}"
+	command mycli --login-path="${1:1}" "${@:2}"
 else
-	command mysql "$@"
+	command mycli "$@"
 fi
