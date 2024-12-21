@@ -4,3 +4,5 @@ _mycli_alias_set() {
 }
 
 _mycli_alias_set
+
+unset -f _mycli_alias_set
