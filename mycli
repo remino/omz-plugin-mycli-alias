@@ -1,9 +1,0 @@
-#!/usr/bin/env zsh
-# vi:ft=zsh
-
-if [ "${1:0:1}" = "@" ]
-then
-	command mycli --login-path="${1:1}" "${@:2}"
-else
-	command mycli "$@"
-fi
